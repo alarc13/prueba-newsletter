@@ -4,7 +4,7 @@ function newsletter(event) {
   
     const email = document.getElementById("email").value;
   
-    fetch("data.json")
+    fetch("/datos/data.json")
       .then(respuesta => respuesta.json())
       .then(datos => {
         const buscar = datos.some(objeto => objeto.email === email);
